@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>DreamWeaver</title>
+</head>
+<body>
+
+   <!-- Background Canvas for Particles -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Main Container -->
+    <div class="login-container">
+        
+        <!-- Background Image -->
+        <img src="blue-background.png" alt="Background Image" class="background">
+
+        <!-- Logo Container -->
+        <div class="logo-container" id="logo">
+            <img src="logo.png" alt="DreamWeaver" class="logo">
+        </div>
+
+        <!-- Tagline -->
+        <div class="tagline" id="tagline">
+            Capture your dreams, weave your story.
+        </div>
+        
+        <!-- Forms Wrapper (for easier alignment) -->
+        <div class="form-wrapper" id="form-wrapper">
+            
+            <!-- Login Form -->
+            <div class="login-form" id="login-form">
+                <div class="inputs">
+                    <input type="text" class="input-field" placeholder="Enter your username">
+                    <input type="password" class="input-field" placeholder="Enter your password">
+                </div>
+                <button class="login-button">Login</button>
+
+                <!-- Forgot Password -->
+                <div class="forgot-password">
+                    Forgot Password?
+                </div>
+
+                <!-- New User -->
+                <div class="member">
+                    New User? <span class="underline" id="create-account">Create a new account</span>
+                </div> 
+            </div> 
+
+            <!-- Signup Form -->
+            <div class="signup-form hidden" id="signup-form">
+                <div class="inputs">
+                    <div class="name-fields">
+                        <input type="text" class="input-field" placeholder="First name">
+                        <input type="text" class="input-field" placeholder="Last name">
+                    </div>
+                    <input type="email" class="input-field" placeholder="Email">
+                    <input type="password" class="input-field" placeholder="New Password">
+                    <input type="password" class="input-field" placeholder="Confirm Password">
+                </div>
+                <button class="signup-button">Sign Up</button>
+
+                <!-- Back to Login -->
+                <div class="member-return">
+                    Already have an account? <span class="underline" id="back-to-login">Log in</span>
+                </div>
+            </div>
+
+        </div> <!-- End Form Wrapper -->
+
+    </div> <!-- End Login Container -->
+    
+    <script src="script.js"></script>
+</body>
+</html>

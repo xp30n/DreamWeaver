@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MI.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <!-- FullCalendar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
+
+    <!-- FullCalendar JS (make sure to load jQuery before FullCalendar) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.js"></script>
+
+    <title>Welcome</title>
+</head>
+<body>
+    <!-- Background Image -->
+    <img src="blue-background.png" alt="Background Image" class="background">
+
+    <!-- Logo -->
+    <div class="logo-container" id="logo">
+        <img src="logo.png" alt="DreamWeaver" class="logo">
+    </div>
+    
+    <!-- Dream Submission -->
+    <div class="submission">
+        <textarea id="dreamInput" name="dreamInput" placeholder="Tell us your dream..." required></textarea>
+    </div>
+    
+    <!-- Submit Button -->
+    <button class="submit-button" id="submitDreamButton">Submit</button>
+
+    <!-- Current Date -->
+    <div class="date-container">
+        <span id="current-date"></span>
+    </div>
+
+    <!-- Calendar Container -->
+    <div id="calendar-container">
+        <div id="calendar"></div>
+    </div>
+
+    <!-- Link to custom JS -->
+    <script src="MI.js"></script>
+
+    <script>
+        // Initialize FullCalendar
+        $(document).ready(function() {
+            $('#calendar').fullCalendar({
+                defaultView: 'month',
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,agendaDay'
+                },
+            });
+        });
+    </script>
+</body>
+</html>
